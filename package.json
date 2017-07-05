@@ -28,7 +28,8 @@
     "mocha": "^3.4.2",
     "source-map-support": "^0.4.15",
     "tslint": "^5.4.3",
-    "typescript": "^2.3.4"
+    "typescript": "^2.3.4",
+    "js-joda": "^1.5.2"
   },
   "peerDependencies": {
     "js-joda": "^1.5.2"

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["es6"],
+    "lib": ["ES5"],
     "module": "commonjs",
-    "target": "ES6",
+    "target": "ES5",
     "alwaysStrict": true,
     "listEmittedFiles": true,
     "noImplicitAny": true,

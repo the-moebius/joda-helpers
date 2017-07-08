@@ -10,6 +10,7 @@ This package provides a small collection of useful helpers for [js-joda][js-joda
 - Casts dates from joda-dates to native dates and vice-versa
 - Parses ISO:8601 strings to joda dates
 - Helps to compare different types of joda dates
+- Converts joda dates to ISO:8601 strings
 
 
 ## Installation

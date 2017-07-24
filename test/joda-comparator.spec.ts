@@ -116,4 +116,27 @@ describe('JodaComparator', function () {
 
   });
 
+  describe('isBetween', function () {
+
+    it('should be present', function () {
+
+      expect(JodaComparator.isBetween).to.be.a('function');
+
+    });
+
+    it('should compare zoned date times correctly', function () {
+
+      const now = ZonedDateTime.now();
+      const date = now;
+      const startDate = now;
+      const endDate = ZonedDateTime.now().plusDays(1);
+
+      expect(JodaComparator.isBetween(date, startDate, endDate)).to.equal(true);
+
+    });
+
+    // @todo: cover all cases
+
+  });
+
 });

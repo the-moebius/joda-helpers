@@ -1,10 +1,11 @@
 
-import {DateTimeFormatter, ZonedDateTime} from 'js-joda';
+import {ZonedDateTime} from 'js-joda';
+import {jodaDateToNativeDate} from './joda-date-to-native-date';
 
 
 export function zonedDateTimeToString (date: ZonedDateTime): string | null {
   try {
-    return date.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+    return jodaDateToNativeDate(date).toISOString();
   } catch (error) {
     console.warn('Failed to convert ZonedDateTime to string', error);
     return null;

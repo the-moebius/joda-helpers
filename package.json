@@ -28,11 +28,14 @@
     "typescript"
   ],
   "main": "dist/cjs/index.js",
-  "__module": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "js-joda": "^1.11.0"
   },

@@ -1,7 +1,7 @@
 
-import { ComparisonTolerance } from './comparison-tolerance';
+import { ComparisonTolerance } from '../comparison-tolerance';
 import { isBetween } from './is-between';
-import { JodaDate } from './joda-date.type';
+import { JodaDate } from '../joda-date';
 
 
 export function isEqual(

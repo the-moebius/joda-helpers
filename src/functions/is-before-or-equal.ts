@@ -1,9 +1,9 @@
 
-import { ComparisonTolerance } from './comparison-tolerance';
-import { JodaDate } from './joda-date.type';
+import { ComparisonTolerance } from '../comparison-tolerance';
+import { JodaDate } from '../joda-date';
 
 
-export function isBefore(
+export function isBeforeOrEqual(
   date1: JodaDate,
   date2: JodaDate,
   options?: {
@@ -22,6 +22,8 @@ export function isBefore(
   }
 
   return (
+    date1.isEqual(date2) ||
+
     // @ts-ignore
     date1.isBefore(date2)
   );

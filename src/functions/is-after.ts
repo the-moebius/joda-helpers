@@ -1,9 +1,9 @@
 
-import { ComparisonTolerance } from './comparison-tolerance';
-import { JodaDate } from './joda-date.type';
+import { ComparisonTolerance } from '../comparison-tolerance';
+import { JodaDate } from '../joda-date';
 
 
-export function isAfterOrEqual(
+export function isAfter(
   date1: JodaDate,
   date2: JodaDate,
   options?: {
@@ -22,8 +22,6 @@ export function isAfterOrEqual(
   }
 
   return (
-    date1.isEqual(date2) ||
-
     // @ts-ignore
     date1.isAfter(date2)
   );

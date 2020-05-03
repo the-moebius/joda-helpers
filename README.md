@@ -58,11 +58,32 @@ tolerance, e.g.: `{ units: ChronoUnit.MINUTES, value: 15 }`. If passed to e.g.
 `isEqual()` function, it will compare two dates in range of `+/- 15 minutes`.
 
 
+### `toIsoString(date: JodaDate): string`
+
+Return `ISO:8601` standard complaint string representation
+of the specified Joda date. Takes [SYSTEM zone ID][js-joda--system-zone-id]
+into consideration.
+
+
 ## Example
 
 ```typescript
-import { isEqual, isAfterOrEqual, isBetween } from '@moebius/joda-helpers';
-import { ChronoUnit, ZonedDateTime } from 'js-joda';
+import {
+  LocalDate,
+  LocalDateTime,
+  ZonedDateTime,
+  ChronoUnit,
+
+} from 'js-joda';
+
+import {
+  isEqual,
+  isAfterOrEqual,
+  isBetween,
+  toIsoString
+
+} from '@moebius/joda-helpers';
+
 
 const date1 = ZonedDateTime.now();
 const date2 = ZonedDateTime.now();
@@ -87,7 +108,18 @@ isBetween({
   startDate: date1,
   endDate: date4,
 });
+
+
+// Returns "2020-05-03T23:54:21.398+03:00"
+toIsoString(ZonedDateTime.now());
+
+// Returns "2020-05-03T23:55:52.487"
+toIsoString(LocalDateTime.now());
+
+// Returns "2020-05-03"
+toIsoString(LocalDate.now());
 ```
+
 
 ## Support
 
@@ -126,3 +158,4 @@ THE SOFTWARE.
 
   [repo-gh]: https://github.com/moebius-mlm/joda-helpers
   [js-joda]: https://github.com/js-joda/js-joda
+  [js-joda--system-zone-id]: https://js-joda.github.io/js-joda/manual/ZonedDateTime.html#the--code-system--code--zone-id

@@ -1,9 +1,9 @@
 
-import { ComparisonTolerance } from './comparison-tolerance';
-import { JodaDate } from './joda-date.type';
+import { ComparisonTolerance } from '../comparison-tolerance';
+import { JodaDate } from '../joda-date';
 
 
-export function isAfter(
+export function isBefore(
   date1: JodaDate,
   date2: JodaDate,
   options?: {
@@ -15,7 +15,7 @@ export function isAfter(
   const { tolerance } = (options || {});
 
   if (tolerance) {
-    date2 = date2.minus(
+    date2 = date2.plus(
       tolerance.value,
       tolerance.units
     );
@@ -23,7 +23,7 @@ export function isAfter(
 
   return (
     // @ts-ignore
-    date1.isAfter(date2)
+    date1.isBefore(date2)
   );
 
 }

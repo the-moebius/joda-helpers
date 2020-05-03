@@ -1,8 +1,9 @@
 
-export { JodaComparator } from './joda-comparator';
-export { JodaDate } from './joda-date.type';
-export { jodaDateToNativeDate } from './functions/joda-date-to-native-date';
-export { nativeDateToLocalDate } from './functions/native-date-to-local-date';
-export { nativeDateToZonedDateTime } from './functions/native-date-to-zoned-date-time';
-export { stringToLocalDate } from './functions/string-to-local-date';
-export { zonedDateTimeToString } from './functions/zoned-date-time-to-string';
+export { JodaDate } from './joda-date.type'
+
+export { isEqual } from './is-equal'
+export { isBefore } from './is-before'
+export { isAfter } from './is-after'
+export { isAfterOrEqual } from './is-after-or-equal'
+export { isBeforeOrEqual } from './is-before-or-equal'
+export { isBetween } from './is-between'

@@ -7,11 +7,8 @@ This package provides a small collection of useful helpers for [js-joda][js-joda
 
 ## Features
 
-- Casts dates from joda-dates to native dates and vice-versa
-- Parses ISO:8601 strings to joda dates
-- Helps to compare different types of joda dates
-- Converts joda dates to ISO:8601 strings
-- Written in TypeScript and provides typing declarations
+- Various dates comparison with configurable tolerance
+- Written in TypeScript and provides type declarations
 - Distributed in both CommonJS and ESM formats
 
 
@@ -22,9 +19,43 @@ Install package with npm:
 `npm i -S @moebius/joda-helpers`
 
 
+## API
+
+### isEqual(date1, date2, options: { tolerance })
+
+Checks if `date1` is equal to `date2` with optional tolerance.
+
+
+### isBefore(date1, date2, options: { tolerance })
+
+Checks if `date1` is before `date2` with optional tolerance.
+
+
+### isAfter(date1, date2, options: { tolerance })
+
+Checks if `date1` is after `date2` with optional tolerance.
+
+
+### isBeforeOrEqual(date1, date2, options: { tolerance })
+
+Checks if `date1` is before or equal to `date2` with optional tolerance.
+
+
+### isAfterOrEqual(date1, date2, options: { tolerance })
+
+Checks if `date1` is after or equal to `date2` with optional tolerance.
+
+
+### isBetween(options: { date, startDate, endDate, tolerance })
+
+Checks if `date` is between `startDate` and `endDate` with optional tolerance.
+
+
 ## Support
 
-If you like this module please consider to add a star on [GitHub repository][repo-gh].
+If you like this library please add a star on this [GitHub repository][repo-gh].
+
+Commercial support and consulting is available, [contact me](mailto:slava@fomin.io).
 
 Thank you!
 

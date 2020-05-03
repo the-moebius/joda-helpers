@@ -1,8 +1,8 @@
 
-import {expect} from 'chai';
+import { expect } from 'chai';
 
-import {JodaComparator} from '../src/joda-comparator';
-import {LocalDate, LocalDateTime, ZonedDateTime} from 'js-joda';
+import { JodaComparator } from '../src/joda-comparator';
+import { LocalDate, LocalDateTime, ZonedDateTime } from 'js-joda';
 
 
 describe('JodaComparator', function () {

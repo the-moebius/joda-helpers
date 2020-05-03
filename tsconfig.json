@@ -1,27 +1,24 @@
 {
   "compilerOptions": {
-    "lib": ["ES5"],
     "module": "commonjs",
-    "target": "ES5",
-    "alwaysStrict": true,
-    "listEmittedFiles": true,
-    "noImplicitAny": true,
-    "outDir": "build/",
-    "pretty": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "typeRoots": [
-      "node_modules/@types"
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext"
     ],
-    "declaration": true
+    "target": "ES2017",
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "outDir": "dist/",
+    "sourceMap": true,
+    "typeRoots": [
+      "types/",
+      "node_modules/@types/"
+    ]
   },
   "include": [
-    "src/**/*",
-    "test/**/*"
-  ],
-  "exclude": [
-    "node_modules/"
+    "src/",
+    "test/"
   ]
 }

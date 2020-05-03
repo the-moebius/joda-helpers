@@ -1,9 +1,8 @@
 
-import {expect} from 'chai';
+import { expect } from 'chai';
+import { ZonedDateTime, ZoneOffset } from 'js-joda';
 
-import {ZonedDateTime, ZoneOffset} from 'js-joda';
-
-import {zonedDateTimeToString} from '../src/zoned-date-time-to-string';
+import { zonedDateTimeToString } from '../src/functions/zoned-date-time-to-string';
 
 
 describe('zonedDateTimeToString()', function () {

@@ -1,5 +1,9 @@
 
-import {LocalDate, LocalDateTime, ZonedDateTime} from 'js-joda';
+import { LocalDate, LocalDateTime, ZonedDateTime } from 'js-joda';
 
 
-export type JodaDate = LocalDate | LocalDateTime | ZonedDateTime;
+export type JodaDate = (
+  | LocalDate
+  | LocalDateTime
+  | ZonedDateTime
+);

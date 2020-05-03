@@ -11,15 +11,13 @@ This package provides a small collection of useful helpers for [js-joda][js-joda
 - Parses ISO:8601 strings to joda dates
 - Helps to compare different types of joda dates
 - Converts joda dates to ISO:8601 strings
+- Written in TypeScript and provides typing declarations
+- Distributed in both CommonJS and ESM formats
 
 
 ## Installation
 
-Install package with yarn:
-
-`yarn add @moebius/joda-helpers`
-
-Or npm:
+Install package with npm:
 
 `npm i -S @moebius/joda-helpers`
 
@@ -35,7 +33,7 @@ Thank you!
 
 The MIT License (MIT)
 
-Copyright (c) 2017 Slava Fomin II, MOEBIUS FOUNDATION.
+Copyright ⓒ 2017—2020 Slava Fomin II, MOEBIUS FOUNDATION.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -5,7 +5,6 @@
     "curly": true,
     "max-line-length": [true, 120],
     "indent": [true, "spaces"],
-    "space-before-function-paren": [true, "always"],
     "quotemark": [true, "single"],
     "no-consecutive-blank-lines": [true, 2],
     "trailing-comma": false,

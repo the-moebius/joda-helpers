@@ -1,37 +1,51 @@
 {
   "name": "@moebius/joda-helpers",
   "description": "Useful helpers for js-joda",
-  "version": "0.2.1",
-  "main": "build/src/index.js",
-  "typings": "build/src/index.d.ts",
-  "author": "Slava Fomin II <s.fomin@betsol.ru>",
+  "version": "0.3.0",
+  "author": "Slava Fomin II <slava@fomin.io> (https://slava.fomin.io)",
+  "homepage": "https://github.com/moebius-mlm/joda-helpers",
+  "repository": "https://github.com/moebius-mlm/joda-helpers.git",
+  "bugs": "https://github.com/moebius-mlm/joda-helpers/issues",
   "license": "MIT",
-  "repository": "https://github.com/moebius-mlm/joda-helpers",
   "scripts": {
-    "build": "rm -rf ./build; ./node_modules/.bin/tsc",
-    "test": "yarn run build && ./node_modules/.bin/mocha ./build/test/setup.js ./build/test/**/*.spec.js"
+    "build": "run-s clean build:tsc",
+    "build:prod": "run-s clean build:tsc:prod:cjs build:tsc:prod:esm",
+    "build:tsc": "tsc",
+    "build:tsc:prod:cjs": "tsc -p tsconfig.prod.cjs.json",
+    "build:tsc:prod:esm": "tsc -p ./tsconfig.prod.esm.json",
+    "clean": "rm -rf ./dist/*",
+    "prepublishOnly": "run-s test build:prod",
+    "test": "run-s build test:mocha",
+    "test:mocha": "mocha ./dist/test/setup.js ./dist/test/**/*.spec.js"
   },
   "keywords": [
-    "js-joda",
-    "joda-time",
-    "helper",
     "date",
+    "helper",
+    "joda-time",
+    "js-joda",
     "time",
     "timezone",
     "typescript"
   ],
-  "devDependencies": {
-    "@types/chai": "^4.0.1",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.2",
-    "chai": "^4.0.2",
-    "mocha": "^3.4.2",
-    "source-map-support": "^0.4.15",
-    "tslint": "^5.4.3",
-    "typescript": "^2.3.4",
-    "js-joda": "^1.5.2"
-  },
+  "main": "dist/cjs/index.js",
+  "__module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "peerDependencies": {
-    "js-joda": "^1.5.2"
+    "js-joda": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.13.4",
+    "chai": "^4.2.0",
+    "js-joda": "^1.11.0",
+    "mocha": "^7.1.2",
+    "npm-run-all": "^4.1.5",
+    "source-map-support": "^0.5.19",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3"
   }
 }

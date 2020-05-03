@@ -58,11 +58,43 @@ tolerance, e.g.: `{ units: ChronoUnit.MINUTES, value: 15 }`. If passed to e.g.
 `isEqual()` function, it will compare two dates in range of `+/- 15 minutes`.
 
 
+## Example
+
+```typescript
+import { isEqual, isAfterOrEqual, isBetween } from '@moebius/joda-helpers';
+import { ChronoUnit, ZonedDateTime } from 'js-joda';
+
+const date1 = ZonedDateTime.now();
+const date2 = ZonedDateTime.now();
+const date3 = ZonedDateTime.now().plusMinutes(10);
+const date4 = ZonedDateTime.now().plusMinutes(30);
+
+// Returns "true"
+isAfterOrEqual(date1, date2);
+isAfterOrEqual(date1, date3);
+
+// Returns "true"
+isEqual(date1, date3, {
+  tolerance: {
+    units: ChronoUnit.MINUTES,
+    value: 15,
+  }
+});
+
+// Returns "true"
+isBetween({
+  date: date3,
+  startDate: date1,
+  endDate: date4,
+});
+```
+
 ## Support
 
 If you like this library please add a star on this [GitHub repository][repo-gh].
 
-Commercial support and consulting is available, [contact me](mailto:slava@fomin.io).
+Commercial support and consulting is also available,
+please [contact me](mailto:slava@fomin.io).
 
 Thank you!
 
@@ -92,5 +124,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-  [repo-gh]: https://github.com/moebiusmlm/joda-helpers
+  [repo-gh]: https://github.com/moebius-mlm/joda-helpers
   [js-joda]: https://github.com/js-joda/js-joda

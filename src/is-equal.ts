@@ -7,13 +7,13 @@ import { JodaDate } from './joda-date.type';
 export function isEqual(
   date1: JodaDate,
   date2: JodaDate,
-  options: {
+  options?: {
     tolerance?: ComparisonTolerance;
   }
 
 ): boolean {
 
-  const { tolerance } = options;
+  const { tolerance } = (options || {});
 
   if (!tolerance) {
     return date1.isEqual(date2);

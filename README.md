@@ -21,34 +21,41 @@ Install package with npm:
 
 ## API
 
-### isEqual(date1, date2, options: { tolerance })
+### `isEqual(date1, date2, options: { tolerance })`
 
 Checks if `date1` is equal to `date2` with optional tolerance.
 
 
-### isBefore(date1, date2, options: { tolerance })
+### `isBefore(date1, date2, options: { tolerance })`
 
 Checks if `date1` is before `date2` with optional tolerance.
 
 
-### isAfter(date1, date2, options: { tolerance })
+### `isAfter(date1, date2, options: { tolerance })`
 
 Checks if `date1` is after `date2` with optional tolerance.
 
 
-### isBeforeOrEqual(date1, date2, options: { tolerance })
+### `isBeforeOrEqual(date1, date2, options: { tolerance })`
 
 Checks if `date1` is before or equal to `date2` with optional tolerance.
 
 
-### isAfterOrEqual(date1, date2, options: { tolerance })
+### `isAfterOrEqual(date1, date2, options: { tolerance })`
 
 Checks if `date1` is after or equal to `date2` with optional tolerance.
 
 
-### isBetween(options: { date, startDate, endDate, tolerance })
+### `isBetween(options: { date, startDate, endDate, tolerance })`
 
 Checks if `date` is between `startDate` and `endDate` with optional tolerance.
+
+
+### `* tolerance: { units: ChronoUnit, value: number }`
+
+Optional `tolerance` configuration property allows to specify date comparison
+tolerance, e.g.: `{ units: ChronoUnit.MINUTES, value: 15 }`. If passed to e.g.
+`isEqual()` function, it will compare two dates in range of `+/- 15 minutes`.
 
 
 ## Support

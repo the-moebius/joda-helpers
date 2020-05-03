@@ -3,7 +3,5 @@ Version history:
 
 # 0.3.0
 
-- library functions are now throwing errors instead of
-  silently returning `null` values
+- library are almost completely rewritten
 - added ESM distribution format (enables tree shaking)
-- done some refactoring

@@ -1,5 +1,7 @@
 
-# `@moebius/joda-helpers`<br><br>Version history
+# Version history
+
+`@moebius/joda-helpers`
 
 # 0.4.1
 

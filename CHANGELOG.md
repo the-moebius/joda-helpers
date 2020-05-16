@@ -1,5 +1,10 @@
 
-Version history:
+# `@moebius/joda-helpers`<br>Version history
+
+# 0.4.1
+
+- updated library to correctly handle joda dates in various formats
+- introduced `toZonedDateTime()` normalization function
 
 # 0.3.0
 

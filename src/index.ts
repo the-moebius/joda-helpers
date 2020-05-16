@@ -7,5 +7,6 @@ export { isAfter } from './functions/is-after'
 export { isAfterOrEqual } from './functions/is-after-or-equal'
 export { isBeforeOrEqual } from './functions/is-before-or-equal'
 export { isBetween } from './functions/is-between'
+export { toZonedDateTime } from './functions/to-zoned-date-time'
 
 export { toIsoString } from './functions/to-iso-string'
